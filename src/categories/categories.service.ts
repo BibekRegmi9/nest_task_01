@@ -10,7 +10,6 @@ import { BaseRepository } from 'typeorm-transactional-cls-hooked';
 export class CategoriesService  {
   constructor(@InjectRepository(Category) private repo: Repository<Category> ){}
       
-  
   async createUser(data) {
   
     const category =   this.repo.create(data);

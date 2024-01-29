@@ -26,7 +26,7 @@ import { join } from 'path';
       })
     ,}),
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname,'../'+ 'public'),
+      rootPath: join(__dirname,'..', 'upload'),
     }), 
     CategoriesModule, BlogsModule,
     ConfigModule.forRoot({isGlobal: true}),
@@ -47,6 +47,6 @@ import { join } from 'path';
 })
 export class AppModule {
   constructor(){
-    console.log(process.env.DB_TYPE)
+    console.log(__dirname+'../')
   }
 }
